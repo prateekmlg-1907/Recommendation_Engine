@@ -1,38 +1,3 @@
-// document.addEventListener('DOMContentLoaded', function() {
-//     // Function to fetch a random movie from TMDB
-//     function fetchRandomMovie(titleElement) {
-//         // Use the provided TMDB API key
-//         const apiKey = '66b309a9a99a994c040c6dca2a34d606';
-//
-//         // Make an API request to TMDB to get a random movie
-//         fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1`)
-//             .then(response => response.json())
-//             .then(data => {
-//                 // Get a random movie from the response
-//                 const randomMovie = data.results[Math.floor(Math.random() * data.results.length)];
-//                 if (randomMovie) {
-//                     // Update the recommendation item with the fetched movie data
-//                     titleElement.textContent = randomMovie.title;
-//                     titleElement.setAttribute('data-title', randomMovie.title);
-//                     titleElement.setAttribute('data-distance', 'Random');
-//                 }
-//             })
-//             .catch(error => {
-//                 console.error('Error fetching movie:', error);
-//             });
-//     }
-//
-//     const recommendationItems = document.querySelectorAll('.recommendation-item');
-//
-//     recommendationItems.forEach(item => {
-//         item.addEventListener('click', () => {
-//             const titleElement = item.querySelector('.recommendation-title');
-//             fetchRandomMovie(titleElement);
-//         });
-//     });
-// });
-//
-
 document.querySelector('.btn-search').addEventListener('click', function () {
     let searchTerm = document.querySelector('input[type="text"]').value;
 
